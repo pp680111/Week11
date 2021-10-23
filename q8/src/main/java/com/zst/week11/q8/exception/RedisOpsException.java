@@ -1,4 +1,4 @@
-package com.zst.week11.q8.lock.exception;
+package com.zst.week11.q8.exception;
 
 /**
  * 用于标记Redis操作失败的异常类

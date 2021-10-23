@@ -1,6 +1,6 @@
 package com.zst.week11.q8.lock;
 
-import com.zst.week11.q8.lock.exception.RedisOpsException;
+import com.zst.week11.q8.exception.RedisOpsException;
 import com.zst.week11.q8.utils.SpringContextUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
