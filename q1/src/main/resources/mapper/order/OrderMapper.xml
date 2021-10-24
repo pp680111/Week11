@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.zst.week11.q1.module.order.dao.OrderDao">
+<!--    <cache/>-->
+    <select id="get" resultType="com.zst.week11.q1.module.order.entity.Order">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                t_order
+            WHERE id = #{id}
+        ]]>
+    </select>
+
+    <select id="getFirst" resultType="com.zst.week11.q1.module.order.entity.Order">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                t_order
+            LIMIT 1
+        ]]>
+    </select>
+
+    <select id="count" resultType="long">
+        <![CDATA[
+            SELECT
+                COUNT(*)
+            FROM
+                t_order
+        ]]>
+    </select>
+
+    <select id="page" resultType="com.zst.week11.q1.module.order.entity.Order">
+        <![CDATA[
+            SELECT
+                *
+            FROM
+                t_order
+            LIMIT #{start}, #{end}
+        ]]>
+    </select>
+</mapper>
